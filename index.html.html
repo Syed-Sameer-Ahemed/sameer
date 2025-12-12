@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syed Sameer Ahemed - Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* ---- NAVBAR ---- */
+        nav {
+            width: 100%;
+            padding: 20px 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #00eaff;
+        }
+
+        /* ---- HERO ---- */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 0 8%;
+        }
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            animation: slideDown 1.2s ease;
+        }
+        .hero-text h1 span {
+            color: #00eaff;
+        }
+        .hero-text p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+            animation-delay: 0.6s;
+        }
+
+        .profile-img {
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            border: 4px solid #00eaff;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 25px #00eaff;
+            animation: fadeInScale 1.3s ease;
+        }
+
+        /* ---- ABOUT ---- */
+        .section {
+            padding: 80px 10%;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #00eaff;
+        }
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            background: #111;
+            padding: 30px;
+            border-radius: 15px;
+            line-height: 1.8;
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.2);
+            animation: fadeIn 1.2s ease;
+        }
+
+        /* ---- SKILLS ---- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 12px 22px;
+            background: #111;
+            border: 1px solid #00eaff;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: #00eaff;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        /* ---- CONTACT ---- */
+        .contact-box {
+            text-align: center;
+            font-size: 1.3rem;
+            line-height: 2;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .contact-box a {
+            color: #00eaff;
+            text-decoration: none;
+        }
+
+        /* ---- ANIMATIONS ---- */
+        @keyframes slideDown {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInScale {
+            from { transform: scale(0.6); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h3>Sameer</h3>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/Syed-Sameer-Ahemed" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Hello, I'm <span>Sameer</span></h1>
+            <p>Information Technology Graduate | MERN Stack Developer | Python & Testing Enthusiast. Passionate about creating beautiful, scalable and user‑friendly applications.</p>
+        </div>
+
+        <div class="profile-img" style="background-image: url('sameer.jpg.jpg');"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <div class="about-box">
+            Motivated Information Technology graduate with strong foundations in software development, testing, and full‑stack web technologies. Skilled in MERN stack, Python frameworks, manual/automation testing, and data visualization. Passionate about building clean, user‑centric applications.
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <h2>Skills & Experience
+
+</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px;">
+
+            <!-- Technical Skills Card -->
+            <div style="background:#111; padding:25px; border-radius:15px; box-shadow:0 0 20px rgba(0,234,255,0.15);">
+                <h3 style="color:#00eaff; margin-bottom:10px;">Technical Skills</h3>
+                <p><strong>Programming:</strong> C, C++, Java, Python</p>
+                <p><strong>Python Frameworks:</strong> Streamlit, Flask, Django, Gradio, Google Colab</p>
+                <p><strong>Web:</strong> HTML, CSS, JavaScript, PHP</p>
+                <p><strong>Databases & Tools:</strong> SQL, MongoDB, Git</p>
+                <p><strong>Visualization:</strong> Power BI, Tableau, RStudio</p>
+                <p><strong>Testing:</strong> Manual Testing, Automation Testing</p>
+                <p><strong>MERN Stack:</strong> MongoDB, Express.js, React.js, Node.js</p>
+            </div>
+
+            
+
+            <!-- Professional Experience Card -->
+            <div style="background:#111; padding:25px; border-radius:15px; box-shadow:0 0 20px rgba(0,234,255,0.15);">
+                <h3 style="color:#00eaff; margin-bottom:10px;">Experience</h3>
+                <p><strong>Game Testing & Q/A</strong> — manual & Automation</p>
+                <p><strong>Website Designer</strong> — Academic & personal projects</p>
+                 <p><strong>Game </strong>— Design & Development</p>
+             </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <h2>Projects</h2>
+
+        <div style="display: flex; gap: 25px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+            <div style="flex: 1; min-width: 320px; background: #111; padding: 25px; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);">
+                <h3>📌 Heart Disease Identification using Ensemble Methods</h3>
+                <ul>
+                    <li>Built predictive models using Random Forest and Gradient Boosting.</li>
+                    <li>Performed data preprocessing and feature analysis.</li>
+                    <li>Delivered insights for early detection and risk assessment.</li>
+                </ul>
+            </div>
+
+            <div style="flex: 1; min-width: 320px; background: #111; padding: 25px; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);">
+                <h3>📌 Voting System through Face Recognition</h3>
+                <ul>
+                    <li>Secure voting system using facial recognition with 3‑level security validation.</li>
+                    <li>Enabled remote voting using image processing.</li>
+                    <li>Technologies Used: OpenCV, Python.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-box">
+            📧 Email: <a href="mailto:sameersmart112000@gmail.com">sameersmart112000@gmail.com</a><br>
+            📞 Phone: +91 8919100968<br>
+            🔗 Portfolio: <a href="https://syedsameer.tiiny.site" target="_blank">syedsameer.tiiny.site</a>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
